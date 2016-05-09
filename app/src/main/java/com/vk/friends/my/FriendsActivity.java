@@ -30,7 +30,7 @@ public class FriendsActivity extends ListActivity implements Observer {
         RequestListenerFriends requestListenerFriends = new RequestListenerFriends();
         requestListenerFriends.registerObserver(this);
 
-        request = VKApi.friends().get(VKParameters.from(VKApiConst.FIELDS, "id,photo_100,photo_max_orig,first_name,last_name,sex,bdate,city"));
+        request = VKApi.friends().get(VKParameters.from(VKApiConst.FIELDS, "id,photo_100,photo_200,first_name,last_name,sex,bdate,city"));
         request.executeWithListener(requestListenerFriends);
 
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -46,7 +46,7 @@ public class FriendsActivity extends ListActivity implements Observer {
                 VKApiUserFull user = friends[position];
                 Intent intent = new Intent(getApplicationContext(), UserInfoActivity.class);
 
-                intent.putExtra(Settings.KEY_USER_PHOTO, user.photo_max_orig);
+                intent.putExtra(Settings.KEY_USER_PHOTO, user.photo_200);
                 intent.putExtra(Settings.KEY_USER_NAME, user.toString());
                 intent.putExtra(Settings.KEY_USER_BDATE, user.bdate);
 
