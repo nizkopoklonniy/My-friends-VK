@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- the avatar -->
+        <ImageView android:id="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true" />
+
+        <!-- the container view for the full name -->
+        <RelativeLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_centerVertical="true" >
+
+            <!-- the full name view -->
+            <TextView android:id="@+id/full_name_descr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

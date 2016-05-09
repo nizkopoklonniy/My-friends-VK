@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">My friends VK</string>
+    <integer name="com_vk_sdk_AppId">3974615</integer>
+</resources>
